@@ -1,0 +1,461 @@
+/* Estilos para páginas individuales */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #2A2A2A;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Contenedor para centrar contenido */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Header con menú y logo centrado */
+.site-header {
+    background-color: #FFD700;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.logo img {
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    margin: 0 5px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #FFFFFF;
+    background-color: #e0b800;
+    border-radius: 3px;
+}
+
+/* Main Content con dos columnas */
+.content-wrapper {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.main-content {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.article-detail {
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.article-title {
+    font-size: 3em;
+    color: #2A2A2A;
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-weight: 700;
+}
+
+.image-container {
+    margin: 0 auto 20px auto;
+    border: 5px solid #FFD700;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    width: 600px;
+    background: linear-gradient(45deg, #FFFFFF, #f5f7fa);
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.article-meta {
+    font-size: 0.9em;
+    color: #666666;
+    margin: 0 auto 20px auto;
+    font-style: italic;
+    text-align: center;
+    max-width: 80%;
+}
+
+.article-content {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.article-content p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #2A2A2A;
+}
+
+.article-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Sección "También puedes ver" al lado derecho, acortada */
+.related-section {
+    flex: 1;
+    background: linear-gradient(135deg, #FFFFFF, #f0f2f5);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+    border-left: 4px solid #FFD700;
+    min-height: 200px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.related-title {
+    font-size: 1.6em;
+    color: #2A2A2A;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 5px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.related-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.related-list li {
+    margin: 10px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 1em;
+    transition: transform 0.3s ease;
+}
+
+.related-list li:hover {
+    transform: translateX(5px);
+}
+
+.related-list li::before {
+    content: "➤";
+    color: #FFD700;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.related-list li a {
+    text-decoration: none;
+    color: #2A2A2A;
+    transition: color 0.3s ease;
+}
+
+.related-list li a:hover {
+    color: #e0b800;
+}
+
+/* Sección de Comentarios asimétrica */
+.comments-section {
+    margin: 40px auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    max-width: 60%;
+    margin-left: 20%;
+}
+
+.comments-section h2 {
+    font-size: 1.8em;
+    color: #2A2A2A;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 5px;
+    display: inline-block;
+    text-align: center;
+}
+
+.comments-form {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#comment-input {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #FFD700;
+    border-radius: 6px;
+    font-size: 1em;
+    resize: vertical;
+    margin-bottom: 10px;
+    color: #2A2A2A;
+    background-color: #f5f7fa;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-button {
+    background-color: #FFD700;
+    color: #2A2A2A;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment-button:hover {
+    background-color: #e0b800;
+}
+
+.comments-list {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.comment {
+    background: linear-gradient(90deg, #f5f7fa, #FFFFFF);
+    padding: 12px;
+    border-radius: 6px;
+    margin: 10px auto;
+    border-left: 5px solid #FFD700;
+    max-width: 80%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.comment p {
+    margin: 0;
+    color: #2A2A2A;
+}
+
+.comment p:first-child {
+    font-size: 0.9em;
+    color: #666666;
+    margin-bottom: 5px;
+}
+
+/* Footer ajustado para coincidir con la página de inicio */
+.site-footer {
+    background-color: #2A2A2A;
+    color: #FFFFFF;
+    padding: 15px 0;
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.site-footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaciado uniforme entre elementos */
+    flex-wrap: wrap; /* Permite apilar en pantallas pequeñas */
+    justify-content: center;
+}
+
+.contact-link {
+    color: #0000FF; /* Azul para el correo */
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.social-link {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #e0b800;
+}
+
+.support-button {
+    background-color: #FFD700;
+    color: #2A2A2A;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+}
+
+.support-button:hover {
+    background-color: #e0b800;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .main-content, .related-section {
+        flex: none;
+        width: 100%;
+        padding: 0;
+        margin: 0 0 20px 0;
+    }
+
+    .related-section {
+        margin-left: 0;
+        max-height: none;
+    }
+
+    .site-header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .article-title {
+        font-size: 2.5em;
+    }
+
+    .article-content {
+        max-width: 90%;
+    }
+
+    .image-container {
+        width: 90%;
+    }
+
+    .comments-section {
+        max-width: 70%;
+        margin-left: 15%;
+    }
+
+    .comments-section h2, .related-title {
+        font-size: 1.5em;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px; /* Menor espaciado en móvil */
+    }
+
+    .support-button {
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .article-detail {
+        padding: 15px;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul li a {
+        padding: 5px;
+    }
+
+    .article-title {
+        font-size: 2em;
+    }
+
+    #comment-input {
+        width: 90%;
+        font-size: 0.9em;
+    }
+
+    .comment-button {
+        width: 90%;
+        margin-top: 5px;
+    }
+
+    .related-list li {
+        padding-left: 15px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .support-button {
+        width: 90%;
+    }
+}

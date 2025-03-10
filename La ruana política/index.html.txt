@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Ruana Política</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="assets/logo.png" alt="La Ruana Política">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#analisis">Análisis</a></li>
+        <li><a href="#entrevistas">Entrevistas</a></li>
+        <li><a href="#columnas">Columnas</a></li>
+        <li><a href="#explicamelo">Explícamelo</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección Inicio -->
+  <section id="inicio" class="hero">
+    <h1>La Ruana Política</h1>
+    <p>Información clara y análisis profundo de la política colombiana.</p>
+  </section>
+
+  <!-- Sección Análisis -->
+  <section id="analisis" class="content-section">
+    <h2>Análisis Político</h2>
+    <div class="articles">
+      <article>
+        <h3>Título del análisis 1</h3>
+        <p>Descripción breve del análisis.</p>
+        <a href="#">Leer más</a>
+      </article>
+      <article>
+        <h3>Título del análisis 2</h3>
+        <p>Descripción breve del análisis.</p>
+        <a href="#">Leer más</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sección Entrevistas -->
+  <section id="entrevistas" class="content-section">
+    <h2>Entrevistas</h2>
+    <div class="articles">
+      <article>
+        <h3>Entrevista a [Nombre]</h3>
+        <p>Descripción breve de la entrevista.</p>
+        <a href="#">Ver entrevista</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sección Columnas -->
+  <section id="columnas" class="content-section">
+    <h2>Columnas de Estudiantes</h2>
+    <div class="articles">
+      <article>
+        <h3>Título de la columna</h3>
+        <p>Descripción breve de la columna.</p>
+        <a href="#">Leer más</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Sección Explícamelo -->
+  <section id="explicamelo" class="content-section">
+    <h2>Explícamelo Fácil</h2>
+    <div class="articles">
+      <article>
+        <h3>Tema explicado</h3>
+        <p>Descripción breve del tema.</p>
+        <a href="#">Leer más</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto">
+    <p>Contacto: info@laranapolitica.com</p>
+    <p>Síguenos en redes sociales:</p>
+    <ul>
+      <li><a href="#">Twitter</a></li>
+      <li><a href="#">Facebook</a></li>
+      <li><a href="#">Instagram</a></li>
+    </ul>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

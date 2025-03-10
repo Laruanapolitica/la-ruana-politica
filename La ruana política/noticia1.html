@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-height, initial-scale=1.0">
+  <title>Gobierno anuncia nueva reforma - La Ruana Política</title>
+  <link rel="stylesheet" href="styles-individual.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header con menú y logo centrado -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <img src="assets/logo ruana política.png" alt="La Ruana Política" onerror="this.src='https://via.placeholder.com/50';">
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html#inicio">Inicio</a></li>
+          <li><a href="index.html#noticias">Noticias</a></li>
+          <li><a href="index.html#analisis">Análisis</a></li>
+          <li><a href="index.html#entrevistas">Entrevistas</a></li>
+          <li><a href="index.html#columnas">Columnas</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="content-wrapper">
+    <div class="container">
+      <div class="main-content">
+        <article class="article-detail">
+          <h1 class="article-title">Gobierno anuncia nueva reforma</h1>
+          <div class="image-container">
+            <img src="assets/noticia1.png" alt="Noticia imagen" class="article-image" onerror="this.src='https://via.placeholder.com/800x400';">
+          </div>
+          <p class="article-meta">Por Juan Pérez | 07/03/2025 | 04:26 PM PST</p>
+          <div class="article-content">
+            <p>El gobierno colombiano ha presentado una nueva reforma tributaria que busca equilibrar las finanzas públicas, pero que ha generado controversia por su impacto en las clases medias. Publicado a las 04:26 PM PST el 07/03/2025. Esta reforma incluye ajustes en los impuestos al consumo y a la renta, con medidas que podrían afectar a más del 30% de los hogares colombianos.</p>
+            <p>Analistas debaten si estas medidas serán suficientes para estabilizar la economía o si agravarán la desigualdad. El presidente ha defendido la reforma como un paso necesario para financiar proyectos sociales, mientras que la oposición la critica por su carga sobre la clase media trabajadora.</p>
+            <p>Se espera que el Congreso debata el proyecto en las próximas semanas, con posibles enmiendas que podrían modificar su alcance. Los ciudadanos han expresado su preocupación en redes sociales, exigiendo transparencia y consultas públicas.</p>
+          </div>
+        </article>
+      </div>
+      <!-- Sección "También puedes ver" al lado derecho, acortada -->
+      <aside class="related-section">
+        <h2 class="related-title">También puedes ver</h2>
+        <ul class="related-list">
+          <li><a href="index.html#noticias">Últimas noticias políticas</a></li>
+          <li><a href="index.html#analisis">Análisis económico 2025</a></li>
+          <li><a href="index.html#entrevistas">Entrevista con expertos</a></li>
+          <li><a href="index.html#columnas">Opinión: Reforma social</a></li>
+        </ul>
+      </aside>
+    </div>
+
+    <!-- Sección de Comentarios asimétrica -->
+    <section class="comments-section">
+      <h2>Comentarios</h2>
+      <div class="comments-form">
+        <textarea id="comment-input" placeholder="Escribe tu comentario..." rows="4" required></textarea>
+        <button id="submit-comment" class="comment-button">Enviar</button>
+      </div>
+      <div id="comments-list" class="comments-list">
+        <!-- Los comentarios se añadirán aquí dinámicamente -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer con enlace funcional a Instagram -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <a href="mailto:info@laruanapolitica.com" class="contact-link">Contacto: info@laruanapolitica.com</a>
+        <a href="#" class="social-link">Twitter</a>
+        <a href="#" class="social-link">Facebook</a>
+        <a href="https://www.instagram.com/laruanapolitica/" class="social-link">Instagram</a>
+        <button class="support-button">Apoya nuestro periodismo</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="java.js"></script>
+  <script>
+    // Función para cargar y mostrar comentarios
+    function loadComments() {
+      const commentsList = document.getElementById('comments-list');
+      const comments = JSON.parse(localStorage.getItem('comments') || '[]');
+      commentsList.innerHTML = '';
+      comments.forEach(comment => {
+        const commentElement = document.createElement('div');
+        commentElement.className = 'comment';
+        commentElement.innerHTML = `<p><strong>Usuario:</strong> Anónimo | <small>${new Date().toLocaleString()}</small></p><p>${comment}</p>`;
+        commentsList.appendChild(commentElement);
+      });
+    }
+
+    // Función para agregar un nuevo comentario
+    function addComment() {
+      const commentInput = document.getElementById('comment-input');
+      const commentText = commentInput.value.trim();
+      if (commentText) {
+        const comments = JSON.parse(localStorage.getItem('comments') || '[]');
+        comments.push(commentText);
+        localStorage.setItem('comments', JSON.stringify(comments));
+        commentInput.value = '';
+        loadComments();
+      }
+    }
+
+    // Evento para el botón de enviar
+    document.getElementById('submit-comment').addEventListener('click', addComment);
+
+    // Cargar comentarios al iniciar
+    window.onload = loadComments;
+  </script>
+</body>
+</html>
